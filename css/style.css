@@ -16,8 +16,9 @@ body {
     background-color: #eaeaea;
 }
 
-.my-profile-pic {
+.my-profile-size {
     height: 3rem;
+    width: 3rem;
 }
 
 .my-light-icons > i {
@@ -27,4 +28,8 @@ body {
 
 .my-fs-secondary {
     font-size: 0.7rem;
+}
+
+.my-light-gray {
+    color: #b1b1b1;
 }
