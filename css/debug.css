@@ -1,0 +1,40 @@
+.debug .container-xl {
+    background-color: crimson;
+    border: 1px dashed black;
+}
+
+.debug aside {
+    background-color: cornflowerblue;
+    border: 1px dashed black;
+}
+
+.debug main {
+    background-color: lightgreen;
+    border: 1px dashed black;
+}
+
+/* ASIDE */
+.debug header {
+    display: flex;
+    justify-content: space-between;
+    background-color: coral;
+}
+
+.debug .profile-container {
+    background-color: crimson;
+    border: 1px dashed black;
+}
+
+.debug .light-icons {
+    background-color: darkslategray;
+    border: 1px dashed black;
+}
+
+.debug aside > div {
+    background-color: deepskyblue;
+}
+
+.debug .chat-input {
+    background-color: goldenrod;
+    border: 1px dashed black;
+}
