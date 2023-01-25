@@ -4,6 +4,27 @@
 }
 
 /* REGOLE GENERALI */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .my-total-heigth {
     height: 100%;
+}
+
+.my-bg-light-gray {
+    background-color: #eaeaea;
+}
+
+.my-profile-pic {
+    height: 3rem;
+}
+
+.my-light-icons > i {
+    color: #b1b1b1;
+    margin-right: 1rem;
+}
+
+.my-fs-secondary {
+    font-size: 0.7rem;
 }
