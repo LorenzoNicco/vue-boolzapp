@@ -33,6 +33,10 @@ li {
     overflow-y: auto;
 }
 
+.contact-selected {
+    background-color: lightgray;
+}
+
 /* REGOLE MESSAGGI */
 .message {
     min-width: 40%;
