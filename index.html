@@ -27,7 +27,7 @@
                     <!--inizio aside------------------------------------->
                     <aside class="col-4 h-100 p-0"> 
                         <!-- USER BAR -->
-                        <header class="p-1 w-100 my-bg-light-gray d-flex justify-content-between">
+                        <header class="p-1 my-4rem-heigth w-100 my-bg-light-gray d-flex justify-content-between">
                             <div class="profile-container">
                                 <img src="boolzapp-data/img/avatar_io.jpg" alt="" class="my-profile-size rounded-circle">
 
@@ -50,14 +50,14 @@
                         </header>
 
                         <!-- NOTIFICATION BANNER -->
-                        <div class="p-3 bg-info d-flex">
+                        <div class="p-1 bg-info my-4rem-heigth d-flex">
                             <div class=" me-3 bg-white rounded-circle my-profile-size d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-bell-slash fa-lg text-info"></i>
                             </div>
 
                             <div>
-                                <span>Ricevi notifiche di nuovi messaggi</span>
-                                <br>
+                                <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
+                                
                                 <a href="#">Attiva noifiche desktop</a>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             </div>
 
                             <!-- contact list -->
-                            <div class="bg-white my-total-heigth">
+                            <div class="bg-white">
                                 <ul>
                                     <li>
                                         <div class="profile-container d-flex">
@@ -103,7 +103,7 @@
                     <!--inizio main-------------------------------------->
                     <main class="col-8 h-100 p-0 d-flex flex-column">
                         <!-- CHAT HEADER BAR -->
-                        <header class="p-1 w-100 my-bg-light-gray d-flex justify-content-between border-start">
+                        <header class="p-1 w-100 my-4rem-heigth my-bg-light-gray d-flex justify-content-between border-start">
                             <div class="profile-container d-flex">
                                 <!-- DA CORREGGERE LO SPAZIO TRA IL NOME DEL PROFILO E L'ULTIMO ACCESSO -->
                                 <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
@@ -132,12 +132,22 @@
 
                         <!-- SEZIONE SCHERMO CHAT -->
                         <section class="chat-window flex-grow-1">
-                            DEBUG
+                            
                         </section>
 
                         <!-- SEZIONE INVIO MESSAGGI -->
-                        <section class="chat-input">
-                            DEBUG
+                        <section class="chat-input my-4rem-heigth container my-bg-light-gray">
+                            <div class="row  p-2">
+                                <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
+                                    <i class="fa-regular fa-face-smile"></i>
+                                </button>
+    
+                                <input type="text" placeholder="Scrivi un messaggio" class="col mx-2 border-0 rounded">
+    
+                                <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </button>
+                            </div>
                         </section>
                     </main>
                     <!--fine main---------------------------------------->

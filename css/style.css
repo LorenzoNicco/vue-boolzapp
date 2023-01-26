@@ -26,6 +26,10 @@ li {
     height: 100%;
 }
 
+.my-4rem-heigth {
+    height: 4rem;
+}
+
 .my-bg-light-gray {
     background-color: #eaeaea;
 }
