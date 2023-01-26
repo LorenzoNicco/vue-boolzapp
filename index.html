@@ -19,191 +19,197 @@
         <title>Vue Boolzapp</title>
     </head>
     <body class="debug">
-        <!-- SFONDO -->
-        <div class="background vh-100 w-100 py-3">
-            <!-- MAIN CONTAINER -->
-            <div class="container-xl my-total-heigth">
-                <div class="row h-100">
-                    <!--inizio aside------------------------------------->
-                    <aside class="col-4 h-100 p-0"> 
-                        <!-- USER BAR -->
-                        <header class="p-1 my-4rem-heigth w-100 my-bg-light-gray d-flex justify-content-between align-items-center">
-                            <div class="profile-container">
-                                <img src="boolzapp-data/img/avatar_io.jpg" alt="" class="my-profile-size rounded-circle">
+        <div id="app">
+            <!-- SFONDO -->
+            <div class="background vh-100 w-100 py-3">
+                <!-- MAIN CONTAINER -->
+                <div class="container-xl my-total-heigth">
+                    <div class="row h-100">
+                        <!--inizio aside------------------------------------->
+                        <aside class="col-4 h-100 p-0"> 
+                            <!-- USER BAR -->
+                            <header class="p-1 my-4rem-heigth w-100 my-bg-light-gray d-flex justify-content-between align-items-center">
+                                <div class="profile-container">
+                                    <img src="boolzapp-data/img/avatar_io.jpg" alt="" class="my-profile-size rounded-circle">
 
-                                <span class="align-middle"><strong>Sofia</strong></span>
-                            </div>
+                                    <span class="align-middle"><strong>Sofia</strong></span>
+                                </div>
 
-                            <div class="my-light-icons d-flex align-items-center">
-                                <button>
-                                    <i class="fa-solid fa-circle-notch fa-lg"></i>
-                                </button>
+                                <div class="my-light-icons d-flex align-items-center">
+                                    <button>
+                                        <i class="fa-solid fa-circle-notch fa-lg"></i>
+                                    </button>
 
-                                <button>
-                                    <i class="fa-solid fa-message fa-lg"></i>
-                                </button>
+                                    <button>
+                                        <i class="fa-solid fa-message fa-lg"></i>
+                                    </button>
 
-                                <button>
-                                    <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-                                </button>
-                            </div>
-                        </header>
+                                    <button>
+                                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                                    </button>
+                                </div>
+                            </header>
 
-                        <!-- NOTIFICATION BANNER -->
-                        <div class="ps-3 bg-info my-5rem-heigth d-flex align-items-center">
-                            <div class=" me-3 bg-white rounded-circle my-profile-size d-flex justify-content-center align-items-center">
-                                <i class="fa-solid fa-bell-slash fa-lg text-info"></i>
-                            </div>
+                            <!-- NOTIFICATION BANNER -->
+                            <div class="ps-3 bg-info my-5rem-heigth d-flex align-items-center">
+                                <div class=" me-3 bg-white rounded-circle my-profile-size d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-bell-slash fa-lg text-info"></i>
+                                </div>
 
-                            <div>
-                                <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
-                                
-                                <a href="#">Attiva noifiche desktop</a>
-                            </div>
-                        </div>
-
-                        <!-- CONTACTS -->
-                        <section class="contact-panel">
-                            <!-- search bar -->
-                            <div class="p-1 bg-light my-3rem-heigth">
-                                <div class="input-group">
-                                    <span class="input-group-text bg-white border-light" id="basic-addon1">
-                                        <i class="fa-solid fa-magnifying-glass my-light-gray"></i>
-                                    </span>
-                                    <input type="text" class="form-control border-light" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
-                                  </div>
-                            </div>
-
-                            <!-- contact list -->
-                            <div class=" contact-list bg-white">
-                                <ul>
-                                    <li>
-                                        <div class="profile-container d-flex">
-                                            <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
-            
-                                            <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                <span class="my-fs-secondary"><strong>Michele</strong></span>
-                                                
-                                                <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                            </div>
-
-                                            <span class="text-secondary my-fs-secondary">12:00</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="profile-container d-flex">
-                                            <img src="boolzapp-data/img/avatar_2.jpg" alt="" class="my-profile-size rounded-circle">
-            
-                                            <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                <span class="my-fs-secondary"><strong>Fabio</strong></span>
-                                                
-                                                <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                            </div>
-
-                                            <span class="text-secondary my-fs-secondary">12:00</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="profile-container d-flex">
-                                            <img src="boolzapp-data/img/avatar_3.jpg" alt="" class="my-profile-size rounded-circle">
-            
-                                            <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                <span class="my-fs-secondary"><strong>Samuele</strong></span>
-                                                
-                                                <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                            </div>
-
-                                            <span class="text-secondary my-fs-secondary">12:00</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="profile-container d-flex">
-                                            <img src="boolzapp-data/img/avatar_4.jpg" alt="" class="my-profile-size rounded-circle">
-            
-                                            <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                <span class="my-fs-secondary"><strong>Alessandro B.</strong></span>
-                                                
-                                                <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                            </div>
-
-                                            <span class="text-secondary my-fs-secondary">12:00</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-                    </aside>
-                    <!--fine aaside-------------------------------------->
-                    
-                    <!--inizio main-------------------------------------->
-                    <main class="col-8 h-100 p-0">
-                        <!-- CHAT HEADER BAR -->
-                        <header class="p-1 w-100 my-4rem-heigth my-bg-light-gray d-flex justify-content-between align-items-center border-start">
-                            <div class="profile-container d-flex">
-                                <!-- DA CORREGGERE LO SPAZIO TRA IL NOME DEL PROFILO E L'ULTIMO ACCESSO -->
-                                <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
-
-                                <div class="ms-3 d-flex flex-column justify-content-center">
-                                    <span class="my-fs-secondary"><strong>Michele</strong></span>
+                                <div>
+                                    <p class="m-0">Ricevi notifiche di nuovi messaggi</p>
                                     
-                                    <span class="text-secondary my-fs-secondary">Ultimo accesso: oggi alle 12:00</span>
+                                    <a href="#">Attiva noifiche desktop</a>
                                 </div>
                             </div>
 
-                            <div class="my-light-icons d-flex align-items-center">
-                                <button>
-                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                                </button>
+                            <!-- CONTACTS -->
+                            <section class="contact-panel">
+                                <!-- search bar -->
+                                <div class="p-1 bg-light my-3rem-heigth">
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-white border-light" id="basic-addon1">
+                                            <i class="fa-solid fa-magnifying-glass my-light-gray"></i>
+                                        </span>
+                                        <input type="text" class="form-control border-light" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
 
-                                <button>
-                                    <i class="fa-solid fa-paperclip fa-lg"></i>
-                                </button>
+                                <!-- contact list -->
+                                <div class=" contact-list bg-white">
+                                    <ul>
+                                        <li>
+                                            <div class="profile-container d-flex">
+                                                <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
+                
+                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
+                                                    <span class="my-fs-secondary"><strong>Michele</strong></span>
+                                                    
+                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
+                                                </div>
 
-                                <button>
-                                    <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-                                </button>
-                            </div>
-                        </header>
+                                                <span class="text-secondary my-fs-secondary">12:00</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="profile-container d-flex">
+                                                <img src="boolzapp-data/img/avatar_2.jpg" alt="" class="my-profile-size rounded-circle">
+                
+                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
+                                                    <span class="my-fs-secondary"><strong>Fabio</strong></span>
+                                                    
+                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
+                                                </div>
 
-                        <!-- SEZIONE SCHERMO CHAT -->
-                        <section class="chat-window d-flex flex-column">
-                            <div class="message sent">
-                                <p>Hai portato a spasso il cane?</p>
+                                                <span class="text-secondary my-fs-secondary">12:00</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="profile-container d-flex">
+                                                <img src="boolzapp-data/img/avatar_3.jpg" alt="" class="my-profile-size rounded-circle">
+                
+                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
+                                                    <span class="my-fs-secondary"><strong>Samuele</strong></span>
+                                                    
+                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
+                                                </div>
 
-                                <span>15.30</span>
-                            </div>
+                                                <span class="text-secondary my-fs-secondary">12:00</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="profile-container d-flex">
+                                                <img src="boolzapp-data/img/avatar_4.jpg" alt="" class="my-profile-size rounded-circle">
+                
+                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
+                                                    <span class="my-fs-secondary"><strong>Alessandro B.</strong></span>
+                                                    
+                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
+                                                </div>
 
-                            <div class="message sent">
-                                <p>Ricordati di stendere i panni</p>
+                                                <span class="text-secondary my-fs-secondary">12:00</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </aside>
+                        <!--fine aaside-------------------------------------->
+                        
+                        <!--inizio main-------------------------------------->
+                        <main class="col-8 h-100 p-0">
+                            <!-- CHAT HEADER BAR -->
+                            <header class="p-1 w-100 my-4rem-heigth my-bg-light-gray d-flex justify-content-between align-items-center border-start">
+                                <div class="profile-container d-flex">
+                                    <!-- DA CORREGGERE LO SPAZIO TRA IL NOME DEL PROFILO E L'ULTIMO ACCESSO -->
+                                    <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
 
-                                <span>15.30</span>
-                            </div>
+                                    <div class="ms-3 d-flex flex-column justify-content-center">
+                                        <span class="my-fs-secondary"><strong>Michele</strong></span>
+                                        
+                                        <span class="text-secondary my-fs-secondary">Ultimo accesso: oggi alle 12:00</span>
+                                    </div>
+                                </div>
 
-                            <div class="message received">
-                                <p>Tutto fatto!</p>
+                                <div class="my-light-icons d-flex align-items-center">
+                                    <button>
+                                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                    </button>
 
-                                <span>16.15</span>
-                            </div>
-                        </section>
+                                    <button>
+                                        <i class="fa-solid fa-paperclip fa-lg"></i>
+                                    </button>
 
-                        <!-- SEZIONE INVIO MESSAGGI -->
-                        <section class="chat-input my-4rem-heigth container my-bg-light-gray">
-                            <div class="row  p-2 h-100">
-                                <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
-                                    <i class="fa-regular fa-face-smile fa-lg"></i>
-                                </button>
-    
-                                <input type="text" placeholder="Scrivi un messaggio" class="col mx-2 border-0 rounded">
-    
-                                <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
-                                    <i class="fa-solid fa-microphone fa-lg"></i>
-                                </button>
-                            </div>
-                        </section>
-                    </main>
-                    <!--fine main---------------------------------------->
+                                    <button>
+                                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                                    </button>
+                                </div>
+                            </header>
+
+                            <!-- SEZIONE SCHERMO CHAT -->
+                            <section class="chat-window d-flex flex-column">
+                                <div class="message sent">
+                                    <p>Hai portato a spasso il cane?</p>
+
+                                    <span>15.30</span>
+                                </div>
+
+                                <div class="message sent">
+                                    <p>Ricordati di stendere i panni</p>
+
+                                    <span>15.30</span>
+                                </div>
+
+                                <div class="message received">
+                                    <p>Tutto fatto!</p>
+
+                                    <span>16.15</span>
+                                </div>
+                            </section>
+
+                            <!-- SEZIONE INVIO MESSAGGI -->
+                            <section class="chat-input my-4rem-heigth container my-bg-light-gray">
+                                <div class="row  p-2 h-100">
+                                    <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
+                                        <i class="fa-regular fa-face-smile fa-lg"></i>
+                                    </button>
+        
+                                    <input type="text" placeholder="Scrivi un messaggio" class="col mx-2 border-0 rounded">
+        
+                                    <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
+                                        <i class="fa-solid fa-microphone fa-lg"></i>
+                                    </button>
+                                </div>
+                            </section>
+                        </main>
+                        <!--fine main---------------------------------------->
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- COLLEGAMENTO JAVASCRIPT E VUEJS -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
