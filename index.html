@@ -71,7 +71,10 @@
                                         <span class="input-group-text bg-white border-light" id="basic-addon1">
                                             <i class="fa-solid fa-magnifying-glass my-light-gray"></i>
                                         </span>
-                                        <input type="text" class="form-control border-light" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control border-light" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1"
+                                         v-model="researchName"
+                                         v-on:keyup="filteredNames()"
+                                        >
                                     </div>
                                 </div>
 
@@ -80,10 +83,11 @@
                                     <ul>
                                         <li class="single-contact"
                                          v-for="(contact, index) in contacts"
+                                         v-show="contacts[index].visible == true"
                                          v-on:click="currentContact = index"
                                          v-bind:class="{'contact-selected': currentContact == index}"
                                         >
-                                            <div class="profile-container d-flex">
+                                            <div class="profile-container d-flex" v-if="contacts[index].visible == true">
                                                 <img class="my-profile-size rounded-circle"
                                                  v-bind:src="'boolzapp-data/img/avatar' + contact.avatar + '.jpg'" v-bind:alt="contact.name"
                                                 >

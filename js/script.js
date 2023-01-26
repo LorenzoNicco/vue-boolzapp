@@ -198,7 +198,8 @@ createApp({
                 date: '10/01/2020 15:51:00',
                 message: 'Ok!',
                 status: 'received'
-            }
+            },
+            researchName: ''
         }
     },
     methods: {
@@ -210,9 +211,17 @@ createApp({
         },
         answerMessage: function() {
             this.contacts[this.currentContact].messages.push(this.replyMessage);
+        },
+        filteredNames() {
+            for (let i = 0; i < this.contacts.length; i++) {
+                this.contacts[i].visible = false;
+
+                if (this.contacts[i].name.toLowerCase().includes(this.researchName.toLowerCase())) {
+                    this.contacts[i].visible = true;
+                }
+            }
+
+
         }
-    },
-    // mounted () {
-        // setTimeout(this.answerMessage, 1000);
-    // }
+    }
 }).mount('#app');
