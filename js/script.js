@@ -202,38 +202,17 @@ createApp({
         }
     },
     methods: {
-        selectContact(index) {
-            this.currentContact = index;
-
-            const contactProfiles = document.querySelectorAll(".single-contact");
-
-            for (let i = 0; i < contactProfiles.length - 1; i++) {
-                contactProfiles[i].classList.remove("contact-selected");
-            }
-            
-            contactProfiles[index].classList.add("contact-selected");
-        },
         addNewMessage: function() {
             this.contacts[this.currentContact].messages.push(this.newMessage);
             this.newMessage = {date: '10/01/2020 15:51:00', message: '', status: 'sent'};
 
-            // let flag = true;
-
-            // if (flag = true) {
-            //     setTimeout(this.answerMessage, 1000);
-            //     this.answerMessage();
-            // }
-
-            // flag = false;
-
             setTimeout(this.answerMessage, 1000);
-            this.answerMessage();
         },
         answerMessage: function() {
             this.contacts[this.currentContact].messages.push(this.replyMessage);
         }
     },
     // mounted () {
-    //     setTimeout(this.answerMessage, 1000);
+        // setTimeout(this.answerMessage, 1000);
     // }
 }).mount('#app');

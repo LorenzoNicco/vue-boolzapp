@@ -80,7 +80,8 @@
                                     <ul>
                                         <li class="single-contact"
                                          v-for="(contact, index) in contacts"
-                                         v-on:click="selectContact(index)"
+                                         v-on:click="currentContact = index"
+                                         v-bind:class="{'contact-selected': currentContact == index}"
                                         >
                                             <div class="profile-container d-flex">
                                                 <img class="my-profile-size rounded-circle"
