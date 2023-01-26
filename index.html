@@ -111,11 +111,13 @@
                         <main class="col-8 h-100 p-0">
                             <!-- CHAT HEADER BAR -->
                             <header class="p-1 w-100 my-4rem-heigth my-bg-light-gray d-flex justify-content-between align-items-center border-start">
-                                <div class="profile-container d-flex">
-                                    <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
+                                <div class="profile-container d-flex"
+                                 v-show="contacts[currentContact]"
+                                >
+                                    <img v-bind:src="'boolzapp-data/img/avatar' + contacts[currentContact].avatar + '.jpg'" alt="" class="my-profile-size rounded-circle">
 
                                     <div class="ms-3 d-flex flex-column justify-content-center">
-                                        <span class="my-fs-secondary"><strong>Michele</strong></span>
+                                        <span class="my-fs-secondary"><strong>{{ contacts[currentContact].name }}</strong></span>
                                         
                                         <span class="text-secondary my-fs-secondary">Ultimo accesso: oggi alle 12:00</span>
                                     </div>

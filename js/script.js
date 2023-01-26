@@ -220,8 +220,6 @@ createApp({
                     this.contacts[i].visible = true;
                 }
             }
-
-
         }
     }
 }).mount('#app');
