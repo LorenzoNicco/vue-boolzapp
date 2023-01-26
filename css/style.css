@@ -21,13 +21,34 @@ li {
     padding: 0.5rem;
 }
 
+.contact-panel {
+    height: calc(100% - 9rem);
+}
+
+.contact-list {
+    height: calc(100% - 3rem);
+    overflow-y: auto;
+}
+
+.chat-window {
+    height: calc(100% - 8rem);
+}
+
 /* MY CLASSES */
 .my-total-heigth {
     height: 100%;
 }
 
+.my-3rem-heigth {
+    height: 3rem;
+}
+
 .my-4rem-heigth {
     height: 4rem;
+}
+
+.my-5rem-heigth {
+    height: 5rem;
 }
 
 .my-bg-light-gray {
