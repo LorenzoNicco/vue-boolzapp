@@ -188,7 +188,30 @@ createApp({
                     ],
                 }
             ],
-            currentContact: 0
+            currentContact: 0,
+            newMessage: {
+                date: '10/01/2020 15:51:00',
+                message: '',
+                status: 'sent'
+            }
+        }
+    },
+    methods: {
+        // selectContact(index) {
+        //     this.currentContact = index;
+
+        //     const contactProfiles = document.querySelectorAll(".single-contact");
+
+        //     if (contactProfiles[index].classList.includes("contact-selected")) {
+        //         contactProfiles[index].classList.remove("contact-selected");
+        //     }
+        //     else {
+        //         contactProfiles[index].classList.add("contact-selected");
+        //     }
+        // }
+        addNewMessage: function() {
+            this.contacts[this.currentContact].messages.push(this.newMessage);
+            this.newMessage = {date: '10/01/2020 15:51:00', message: '', status: 'sent'};
         }
     }
 }).mount('#app');

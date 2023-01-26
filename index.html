@@ -78,7 +78,8 @@
                                 <!-- contact list -->
                                 <div class=" contact-list bg-white">
                                     <ul>
-                                        <li v-for="(contact, index) in contacts"
+                                        <li class="single-contact"
+                                         v-for="(contact, index) in contacts"
                                          v-on:click="currentContact = index"
                                         >
                                             <div class="profile-container d-flex">
@@ -106,7 +107,6 @@
                             <!-- CHAT HEADER BAR -->
                             <header class="p-1 w-100 my-4rem-heigth my-bg-light-gray d-flex justify-content-between align-items-center border-start">
                                 <div class="profile-container d-flex">
-                                    <!-- DA CORREGGERE LO SPAZIO TRA IL NOME DEL PROFILO E L'ULTIMO ACCESSO -->
                                     <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
 
                                     <div class="ms-3 d-flex flex-column justify-content-center">
@@ -150,7 +150,10 @@
                                         <i class="fa-regular fa-face-smile fa-lg"></i>
                                     </button>
         
-                                    <input type="text" placeholder="Scrivi un messaggio" class="col mx-2 border-0 rounded">
+                                    <input type="text" placeholder="Scrivi un messaggio" class="col mx-2 border-0 rounded"
+                                     v-model="newMessage.message"
+                                     v-on:keyup.enter="addNewMessage()"
+                                    >
         
                                     <button class="col-1 border-0 rounded my-bg-light-gray text-secondary">
                                         <i class="fa-solid fa-microphone fa-lg"></i>
