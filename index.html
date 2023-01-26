@@ -81,11 +81,11 @@
                                         <li v-for="(contact, index) in contacts">
                                             <div class="profile-container d-flex">
                                                 <img class="my-profile-size rounded-circle"
-                                                 v-bind:src="'boolzapp-data/img/avatar' + contacts[index].avatar + '.jpg'" v-bind:alt="contacts[index].name"
+                                                 v-bind:src="'boolzapp-data/img/avatar' + contact.avatar + '.jpg'" v-bind:alt="contact.name"
                                                 >
                 
                                                 <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                    <span class="my-fs-secondary"><strong>{{ contacts[index].name }}</strong></span>
+                                                    <span class="my-fs-secondary"><strong>{{ contact.name }}</strong></span>
                                                     
                                                     <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
                                                 </div>
@@ -131,22 +131,13 @@
 
                             <!-- SEZIONE SCHERMO CHAT -->
                             <section class="chat-window d-flex flex-column">
-                                <div class="message sent">
-                                    <p>Hai portato a spasso il cane?</p>
+                                <div class="message"
+                                 v-for="(item, index) in contacts[currentContact].messages"
+                                 v-bind:class="(item.status == 'sent')? 'sent' : 'received'"
+                                >
+                                    <p>{{ item.message }}</p>
 
                                     <span>15.30</span>
-                                </div>
-
-                                <div class="message sent">
-                                    <p>Ricordati di stendere i panni</p>
-
-                                    <span>15.30</span>
-                                </div>
-
-                                <div class="message received">
-                                    <p>Tutto fatto!</p>
-
-                                    <span>16.15</span>
                                 </div>
                             </section>
 

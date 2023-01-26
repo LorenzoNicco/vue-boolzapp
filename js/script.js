@@ -187,7 +187,8 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            currentContact: 0
         }
     }
 }).mount('#app');
