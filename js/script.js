@@ -193,25 +193,47 @@ createApp({
                 date: '10/01/2020 15:51:00',
                 message: '',
                 status: 'sent'
+            },
+            replyMessage: {
+                date: '10/01/2020 15:51:00',
+                message: 'Ok!',
+                status: 'received'
             }
         }
     },
     methods: {
-        // selectContact(index) {
-        //     this.currentContact = index;
+        selectContact(index) {
+            this.currentContact = index;
 
-        //     const contactProfiles = document.querySelectorAll(".single-contact");
+            const contactProfiles = document.querySelectorAll(".single-contact");
 
-        //     if (contactProfiles[index].classList.includes("contact-selected")) {
-        //         contactProfiles[index].classList.remove("contact-selected");
-        //     }
-        //     else {
-        //         contactProfiles[index].classList.add("contact-selected");
-        //     }
-        // }
+            for (let i = 0; i < contactProfiles.length - 1; i++) {
+                contactProfiles[i].classList.remove("contact-selected");
+            }
+            
+            contactProfiles[index].classList.add("contact-selected");
+        },
         addNewMessage: function() {
             this.contacts[this.currentContact].messages.push(this.newMessage);
             this.newMessage = {date: '10/01/2020 15:51:00', message: '', status: 'sent'};
+
+            // let flag = true;
+
+            // if (flag = true) {
+            //     setTimeout(this.answerMessage, 1000);
+            //     this.answerMessage();
+            // }
+
+            // flag = false;
+
+            setTimeout(this.answerMessage, 1000);
+            this.answerMessage();
+        },
+        answerMessage: function() {
+            this.contacts[this.currentContact].messages.push(this.replyMessage);
         }
-    }
+    },
+    // mounted () {
+    //     setTimeout(this.answerMessage, 1000);
+    // }
 }).mount('#app');

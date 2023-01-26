@@ -17,11 +17,11 @@ body {
 
 ul {
     list-style: none;
-    padding-left: 0.5rem;
+    padding: 0;
 }
 
-li {
-    padding: 0.5rem;
+.single-contact {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .contact-panel {
@@ -34,7 +34,7 @@ li {
 }
 
 .contact-selected {
-    background-color: lightgray;
+    background-color: rgb(223, 223, 223);
 }
 
 /* REGOLE MESSAGGI */
