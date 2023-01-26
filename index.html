@@ -78,51 +78,14 @@
                                 <!-- contact list -->
                                 <div class=" contact-list bg-white">
                                     <ul>
-                                        <li>
+                                        <li v-for="(contact, index) in contacts">
                                             <div class="profile-container d-flex">
-                                                <img src="boolzapp-data/img/avatar_1.jpg" alt="" class="my-profile-size rounded-circle">
+                                                <img class="my-profile-size rounded-circle"
+                                                 v-bind:src="'boolzapp-data/img/avatar' + contacts[index].avatar + '.jpg'" v-bind:alt="contacts[index].name"
+                                                >
                 
                                                 <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                    <span class="my-fs-secondary"><strong>Michele</strong></span>
-                                                    
-                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                                </div>
-
-                                                <span class="text-secondary my-fs-secondary">12:00</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="profile-container d-flex">
-                                                <img src="boolzapp-data/img/avatar_2.jpg" alt="" class="my-profile-size rounded-circle">
-                
-                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                    <span class="my-fs-secondary"><strong>Fabio</strong></span>
-                                                    
-                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                                </div>
-
-                                                <span class="text-secondary my-fs-secondary">12:00</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="profile-container d-flex">
-                                                <img src="boolzapp-data/img/avatar_3.jpg" alt="" class="my-profile-size rounded-circle">
-                
-                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                    <span class="my-fs-secondary"><strong>Samuele</strong></span>
-                                                    
-                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
-                                                </div>
-
-                                                <span class="text-secondary my-fs-secondary">12:00</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="profile-container d-flex">
-                                                <img src="boolzapp-data/img/avatar_4.jpg" alt="" class="my-profile-size rounded-circle">
-                
-                                                <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
-                                                    <span class="my-fs-secondary"><strong>Alessandro B.</strong></span>
+                                                    <span class="my-fs-secondary"><strong>{{ contacts[index].name }}</strong></span>
                                                     
                                                     <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
                                                 </div>
