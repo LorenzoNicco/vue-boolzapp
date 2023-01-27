@@ -95,10 +95,10 @@
                                                 <div class="ms-3 d-flex flex-column justify-content-start flex-grow-1">
                                                     <span class="my-fs-secondary"><strong>{{ contact.name }}</strong></span>
                                                     
-                                                    <span class="text-secondary my-fs-secondary">Ultimo messaggio inviato</span>
+                                                    <span class="text-secondary my-fs-secondary">{{ contact.messages[contact.messages.length - 1].message }}</span>
                                                 </div>
 
-                                                <span class="text-secondary my-fs-secondary">12:00</span>
+                                                <span class="text-secondary my-fs-secondary">{{ contact.messages[contact.messages.length - 1].date }}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -117,7 +117,7 @@
                                     <div class="ms-3 d-flex flex-column justify-content-center">
                                         <span class="my-fs-secondary"><strong>{{ contacts[currentContact].name }}</strong></span>
                                         
-                                        <span class="text-secondary my-fs-secondary">Ultimo accesso: oggi alle 12:00</span>
+                                        <span class="text-secondary my-fs-secondary">Ultimo accesso: oggi alle {{ contacts[currentContact].messages[contacts[currentContact].messages.length - 1].date }}</span>
                                     </div>
                                 </div>
 

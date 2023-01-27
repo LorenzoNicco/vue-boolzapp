@@ -246,13 +246,12 @@ createApp({
         }
     },
     mounted() {
-        for (let i = 0; i < this.contacts[this.currentContact].messages.length; i++) {
-            let splittedDate = this.contacts[this.currentContact].messages[i].date.split(' ');
-
-            const formattedTime = splittedDate[1].slice(0, 5);
-            console.log(formattedTime);
-
-            this.contacts[this.currentContact].messages[i].date = formattedTime;
+        for (let j = 0; j < this.contacts.length; j++) {
+            for (let i = 0; i < this.contacts[j].messages.length; i++) {
+                let formattedTime = this.contacts[j].messages[i].date.slice(11, 16);
+    
+                this.contacts[j].messages[i].date = formattedTime;
+            }
         }
     }
 }).mount('#app');
