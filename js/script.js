@@ -199,7 +199,9 @@ createApp({
                 message: 'Ok!',
                 status: 'received'
             },
-            researchName: ''
+            researchName: '',
+            displayType: 'd-none',
+            messageIndex: ''
         }
     },
     methods: {
@@ -220,6 +222,14 @@ createApp({
                     this.contacts[i].visible = true;
                 }
             }
+        },
+        deleteMenu() {
+            for (let i = 0; i < this.contacts[this.currentContact].messages.length; i++) {
+                this.contacts[this.currentContact].messages[i].displayMenu = false;
+            }
+
+            console.log(this.contacts[this.currentContact].messages)
         }
+
     }
 }).mount('#app');

@@ -22,6 +22,7 @@ ul {
 
 .single-contact {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
+    cursor: pointer;
 }
 
 .contact-panel {
@@ -45,6 +46,7 @@ ul {
     border-radius: 10px;
     margin-bottom: 0.5rem;
     position: relative;
+    cursor: pointer;
 }
 
 .message > p {
@@ -69,6 +71,17 @@ ul {
 .received {
     background-color: #fdfdfd;
     align-self: flex-start;
+}
+
+#message-menu {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    bottom: -110%;
+    cursor: pointer;
 }
 
 /* MY CLASSES */

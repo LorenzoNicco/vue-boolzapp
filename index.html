@@ -83,11 +83,11 @@
                                     <ul>
                                         <li class="single-contact"
                                          v-for="(contact, index) in contacts"
-                                         v-show="contacts[index].visible == true"
+                                         v-bind:class="(contacts[index].visible == true) ? 'd-block' : 'd-none'"
                                          v-on:click="currentContact = index"
                                          v-bind:class="{'contact-selected': currentContact == index}"
                                         >
-                                            <div class="profile-container d-flex" v-if="contacts[index].visible == true">
+                                            <div class="profile-container d-flex">
                                                 <img class="my-profile-size rounded-circle"
                                                  v-bind:src="'boolzapp-data/img/avatar' + contact.avatar + '.jpg'" v-bind:alt="contact.name"
                                                 >
@@ -111,9 +111,7 @@
                         <main class="col-8 h-100 p-0">
                             <!-- CHAT HEADER BAR -->
                             <header class="p-1 w-100 my-4rem-heigth my-bg-light-gray d-flex justify-content-between align-items-center border-start">
-                                <div class="profile-container d-flex"
-                                 v-show="contacts[currentContact]"
-                                >
+                                <div class="profile-container d-flex">
                                     <img v-bind:src="'boolzapp-data/img/avatar' + contacts[currentContact].avatar + '.jpg'" alt="" class="my-profile-size rounded-circle">
 
                                     <div class="ms-3 d-flex flex-column justify-content-center">
@@ -143,10 +141,17 @@
                                 <div class="message"
                                  v-for="(item, index) in contacts[currentContact].messages"
                                  v-bind:class="(item.status == 'sent')? 'sent' : 'received'"
+                                 v-on:click="deleteMenu()"
                                 >
                                     <p>{{ item.message }}</p>
 
                                     <span>15.30</span>
+
+                                    <div id="message-menu"
+                                     v-show="displayMenu == true"
+                                    >
+                                        Delete message
+                                    </div>
                                 </div>
                             </section>
 
