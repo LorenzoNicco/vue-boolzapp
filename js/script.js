@@ -200,8 +200,8 @@ createApp({
                 status: 'received'
             },
             researchName: '',
-            displayType: 'd-none',
-            messageIndex: ''
+            displayType: 'd-block',
+            displayMenu: false,
         }
     },
     methods: {
@@ -223,13 +223,20 @@ createApp({
                 }
             }
         },
-        deleteMenu() {
-            for (let i = 0; i < this.contacts[this.currentContact].messages.length; i++) {
+        deleteMenu(index) {
+            let i = 0;
+            while (i < this.contacts[this.currentContact].messages.length) {
                 this.contacts[this.currentContact].messages[i].displayMenu = false;
+
+                i++;
             }
 
-            console.log(this.contacts[this.currentContact].messages)
-        }
+            i = index;
 
+            this.contacts[this.currentContact].messages[i].displayMenu = true;
+        },
+        deleteMessage(item) {
+            item.displayType = 'd-none';
+        }
     }
 }).mount('#app');

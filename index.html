@@ -140,15 +140,16 @@
                             <section class="chat-window d-flex flex-column">
                                 <div class="message"
                                  v-for="(item, index) in contacts[currentContact].messages"
-                                 v-bind:class="(item.status == 'sent')? 'sent' : 'received'"
-                                 v-on:click="deleteMenu()"
+                                 v-bind:class="item.displayType, (item.status == 'sent')? 'sent' : 'received'"
+                                 v-on:click="deleteMenu(index)"
                                 >
                                     <p>{{ item.message }}</p>
 
                                     <span>15.30</span>
 
                                     <div id="message-menu"
-                                     v-show="displayMenu == true"
+                                     v-show="item.displayMenu == true"
+                                     v-on:click.stop="deleteMessage(item)"
                                     >
                                         Delete message
                                     </div>
