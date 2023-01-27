@@ -206,12 +206,18 @@ createApp({
     },
     methods: {
         addNewMessage: function() {
+            const dt = luxon.DateTime;
+            console.log(dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS));
+            this.newMessage.date = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+            
             this.contacts[this.currentContact].messages.push(this.newMessage);
             this.newMessage = {date: '10/01/2020 15:51:00', message: '', status: 'sent'};
 
             setTimeout(this.answerMessage, 1000);
         },
         answerMessage: function() {
+            const dt = luxon.DateTime;
+            this.replyMessage.date = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
             this.contacts[this.currentContact].messages.push(this.replyMessage);
         },
         filteredNames() {

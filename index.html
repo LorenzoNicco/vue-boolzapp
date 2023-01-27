@@ -145,7 +145,7 @@
                                 >
                                     <p>{{ item.message }}</p>
 
-                                    <span>15.30</span>
+                                    <span>{{ item.date }} <i class="fa-solid fa-check"></i></span>
 
                                     <div id="message-menu"
                                      v-show="item.displayMenu == true"
@@ -182,6 +182,7 @@
 
         <!-- COLLEGAMENTO JAVASCRIPT E VUEJS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js" integrity="sha256-eTuW4qNdO+s5QEVrZ6g02eMzgyEZmLLuaUscvGF8/t0=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
