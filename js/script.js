@@ -207,8 +207,8 @@ createApp({
     methods: {
         addNewMessage: function() {
             const dt = luxon.DateTime;
-            console.log(dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS));
-            this.newMessage.date = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+            console.log(dt.now().toLocaleString(dt.TIME_24_SIMPLE));
+            this.newMessage.date = dt.now().toLocaleString(dt.TIME_24_SIMPLE);
             
             this.contacts[this.currentContact].messages.push(this.newMessage);
             this.newMessage = {date: '10/01/2020 15:51:00', message: '', status: 'sent'};
@@ -217,7 +217,7 @@ createApp({
         },
         answerMessage: function() {
             const dt = luxon.DateTime;
-            this.replyMessage.date = dt.now().toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+            this.replyMessage.date = dt.now().toLocaleString(dt.TIME_24_SIMPLE);
             this.contacts[this.currentContact].messages.push(this.replyMessage);
         },
         filteredNames() {
@@ -243,6 +243,16 @@ createApp({
         },
         deleteMessage(item) {
             item.displayType = 'd-none';
+        }
+    },
+    mounted() {
+        for (let i = 0; i < this.contacts[this.currentContact].messages.length; i++) {
+            let splittedDate = this.contacts[this.currentContact].messages[i].date.split(' ');
+
+            const formattedTime = splittedDate[1].slice(0, 5);
+            console.log(formattedTime);
+
+            this.contacts[this.currentContact].messages[i].date = formattedTime;
         }
     }
 }).mount('#app');
