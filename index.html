@@ -83,9 +83,12 @@
                                     <ul>
                                         <li class="single-contact"
                                          v-for="(contact, index) in contacts"
-                                         v-bind:class="(contacts[index].visible == true) ? 'd-block' : 'd-none'"
                                          v-on:click="currentContact = index"
-                                         v-bind:class="{'contact-selected': currentContact == index}"
+                                         v-bind:class="{
+                                         'contact-selected': currentContact == index,
+                                         'd-block': contacts[index].visible == true,
+                                         'd-none': contacts[index].visible == false
+                                         }"
                                         >
                                             <div class="profile-container d-flex">
                                                 <img class="my-profile-size rounded-circle"
