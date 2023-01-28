@@ -30,7 +30,8 @@
                             <!-- USER BAR -->
                             <header class="p-1 my-4rem-heigth w-100 my-bg-light-gray d-flex justify-content-between align-items-center">
                                 <div class="profile-container">
-                                    <img src="boolzapp-data/img/avatar_io.jpg" alt="" class="my-profile-size rounded-circle">
+                                    <img src="boolzapp-data/img/avatar_io.jpg" alt="" class="my-profile-size rounded-circle"
+                                     v-on:click="displayAside = true">
 
                                     <span class="align-middle"><strong>Sofia</strong></span>
                                 </div>
@@ -107,6 +108,56 @@
                                     </ul>
                                 </div>
                             </section>
+
+                            <!-- inizio bonus ------------------------------------------------->
+                            <div id="infra-aside"
+                             v-bind:class="{'d-none': displayAside == false}"
+                            >
+                                <div class="top-part text-white d-flex align-items-end p-3 fs-4">
+                                    <button>
+                                        <i class="fa-solid fa-arrow-left align-middle"
+                                         v-on:click="displayAside = false"
+                                        ></i>
+                                    </button>
+
+                                    <p class="mb-0 ms-3">Profilo</p>
+                                </div>
+
+                                <div class="bottom-part pt-4">
+                                    <div class="pic-container-big text-center">
+                                        <img src="boolzapp-data/img/avatar_io.jpg" alt="" class="rounded-circle">
+                                    </div>
+
+                                    <div class="info-section">
+                                        <p class="info-p">Il tuo nome</p>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <span>Sofia</span>
+
+                                            <button>
+                                                <i class="fa-solid fa-pen"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="comunication">
+                                        <p class="text-secondary">Questo non è il tuo nome utente o PIN. Questo nome sarà visibile ai tuoi contatti Boolzapp.</p>
+                                    </div>
+
+                                    <div class="info-section">
+                                        <p class="info-p">info</p>
+                                        
+                                        <div class="d-flex justify-content-between">
+                                            <span>Disponibile</span>
+
+                                            <button>
+                                                <i class="fa-solid fa-pen"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fine bonus --------------------------------------------------->
                         </aside>
                         <!--fine aaside-------------------------------------->
                         
@@ -148,7 +199,16 @@
                                 >
                                     <p>{{ item.message }}</p>
 
-                                    <span>{{ item.date }} <i class="fa-solid fa-check"></i></span>
+                                    <span>
+                                        {{ item.date }}
+                                        
+                                        <i class="fa-solid fa-check fa-lg text-primary"
+                                         v-bind:class="{'d-none': item.status == 'received'}"
+                                        ></i>
+                                        <i class="fa-solid fa-check fa-lg text-primary"
+                                        v-bind:class="{'d-none': item.status == 'received'}"
+                                       ></i>
+                                    </span>
 
                                     <div id="message-menu"
                                      v-show="item.displayMenu == true"

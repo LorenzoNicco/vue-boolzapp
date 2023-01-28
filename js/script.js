@@ -202,6 +202,9 @@ createApp({
             researchName: '',
             displayType: 'd-block',
             displayMenu: false,
+            // inizio bonus
+            displayAside: false
+            // fine bonus
         }
     },
     methods: {
