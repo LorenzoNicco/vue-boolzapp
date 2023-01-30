@@ -222,6 +222,7 @@ createApp({
             const dt = luxon.DateTime;
             this.replyMessage.date = dt.now().toLocaleString(dt.TIME_24_SIMPLE);
             this.contacts[this.currentContact].messages.push(this.replyMessage);
+            this.replyMessage = {date: '10/01/2020 15:51:00', message: 'Ok!', status: 'received'};
         },
         filteredNames() {
             for (let i = 0; i < this.contacts.length; i++) {
@@ -244,8 +245,8 @@ createApp({
 
             this.contacts[this.currentContact].messages[i].displayMenu = true;
         },
-        deleteMessage(item) {
-            item.displayType = 'd-none';
+        deleteMessage(index) {
+            this.contacts[this.currentContact].messages.splice(index, 1);
         }
     },
     mounted() {
